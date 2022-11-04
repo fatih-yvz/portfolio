@@ -113,6 +113,14 @@ main > article {
     border-bottom: 1px solid black;
 }
 
+#main-article-1 > h1{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-weight: lighter;
+    font-size: 36px;
+
+}
+
 /*General*/
 .container {
     border-bottom: 2px solid green;
@@ -221,6 +229,7 @@ main > article {
 
 .titles > p{
     font-size: 36px;
+    width: 20vw;
 }
 
 .titles > img {
@@ -229,9 +238,8 @@ main > article {
 }
 
 
-.details > p {
+.details li {
     font-size: 24px;
-    width: 40vw;
 
 }
 /*Responsiye for Experience and Education*/
@@ -312,6 +320,12 @@ main > article {
     height: 8vw ;
     border-radius: 25%;
 
+}
+
+.addActivity p {
+    font-size: 24px;
+    width: 15vw;
+    
 }
 /*This part is for footer*/
 

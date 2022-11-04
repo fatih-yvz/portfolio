@@ -1,6 +1,16 @@
-1-) header transition 
-2-) Click Top button to scrool from botom to top 
-3-) slow scrool moving
-4-) to find icon, use fontwasome
+Done
+1-) Header transition 
+2-) Used font awsome
+3-) Click Top button to scrool from botom to top 
+4-) Slow scrool moving
+5-) navigation between parts of cv
+6-) Dynamic HTML structure using js, only add data js automaticly created HTML elements
+7-) Responsive Design 
 
-5-) responsive design check nav bar 
+To do 
+
+1-) Contact, Blog and Projects Page 
+2-) add connection between contact page and googleSheets
+3-) add json file and put all data inside it and read from json using fetch function
+4-) add a clock or weather info using API 
+5-) always update code, remove unnecessary code

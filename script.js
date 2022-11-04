@@ -1,41 +1,8 @@
-console.log('js file was called...')
-
-/**Texts */
-
 let aboutMeText = "I graduated as an electronic engineer and have 3 years of experience."+
-"I love to solve problems and learn new things."+ 
- "Now, I am interested in web technologies."+
- "I am looking forward to joining a team that works on"+
-"creative projects as a web developer."
- 
-
-
-let testTextLarge = "Lorem Ipsum is simply dummy text" +
-"of the printing and typesetting industry." +
-"Lorem Ipsum has been the industry's standard" +
-"dummy text ever since the 1500s," +
-"when an unknown printer took a"+
-"galley of type and scrambled it to make a type specimen book."+
-" It has survived not only five centuries," +
-"but also the leap into electronic typesetting,"+
-" remaining essentially unchanged."+
-"It was popularised in the 1960s with the release of "+
-"Letraset sheets containing Lorem Ipsum passages," +
-"and more recently with desktop publishing software like" +
-"Aldus PageMaker including versions of Lorem Ipsum"
-
-
-
-let testTextMedium = "Lorem Ipsum is simply dummy text" +
-"of the printing and typesetting industry." +
-"Lorem Ipsum has been the industry's standard" +
-"dummy text ever since the 1500s," +
-"when an unknown printer took a"+
-"galley of type and scrambled it to make a type specimen book."+
-" It has survived not only five centuries,";
-
-let testTextSmall = "Lorem Ipsum is simply dummy text" +
-"of the printing and typesetting industry.";
+ "I love to solve problems and learn new things."+ 
+  "Now, I am interested in web technologies."+
+  "I am looking forward to joining a team that works on"+
+ "creative projects as a web developer."
 
 /**Experiences */
 
@@ -43,26 +10,45 @@ let experiences = [
     {
         title:'Powercoders',
         date:'09.2022',
-        detail:testTextMedium,
-        imgSrc:'./img/logo/powercoders-logo.svg'
+        imgSrc:'./img/logo/powercoders-logo.svg',
+        text:["Foundations in HTML, CSS, JavaScript; specialization tracks upcoming.",
+        "Weekly business & social skills training (teamwork, communication, etc."
+        ]
+                
     },
     {
         title:'Nadir',
         date:'11.2017',
-        detail:testTextMedium,
-        imgSrc:'./img/logo/nadirAyakkabi.svg'
+        imgSrc:'./img/logo/nadirAyakkabi.svg',
+        text:["Administration of the company's website",
+        "Managing the preparation of online orders",
+        "Using an ERP system named the winner to manage order process",
+        "Using Excel and writing Visual Basic code to create reports",
+        "Managing customs process to export"
+    ]
     },
     {
         title:'Digitest',
         date:'01.2017',
-        detail:testTextMedium,
-        imgSrc:'./img/logo/digitestLogo.png'
+        imgSrc:'./img/logo/digitestLogo.png',
+        text:[
+            "Working on Xilinx FPGA development board",
+            "Using VHDL for development",
+            "Researching how to use embedded systems for image processing",
+            "Using arduino and raspberry to test some signals",
+            "Helping intern BSc students"
+        ]
     },
     {
-        title:'Digitest',
+        title:'Yildiz Technical University',
         date:'01.2017',
-        detail:testTextMedium,
-        imgSrc:'./img/logo/digitestLogo.png'
+        imgSrc:'./img/logo/ytu.svg',
+        text:[
+            "Working as an assistant instructor in image processing Lab",
+            "Reading articles and trying to implement them on MatLab",
+            "Preparation of test environments",
+            "Writing or contributing a new article about image processing domain"
+        ]
     }
 
 ]
@@ -72,24 +58,23 @@ let educations=[
     {
         title: 'Msc',
         date:'01.2015',
-        detail:testTextSmall,
-        imgSrc:'./img/logo/ytu.svg'
+        imgSrc:'./img/logo/ytu.svg',
+        text:[
+            "Focusing on signal and image processing",
+        ]
     },
 
     {
         title: 'Bsc',
         date:'08.2008',
-        detail:testTextSmall,
-        imgSrc:'./img/logo/ytu.svg'
-    },
-    {
-        title: 'Bsc',
-        date:'08.2008',
-        detail:testTextSmall,
-        imgSrc:'./img/logo/ytu.svg'
+        imgSrc:'./img/logo/ytu.svg',
+        text:[
+            "Graduating as an electronic and communication engineer and an honor student ( my grade was 3.16 out of 4.0)"
+        ]
     }
 ];
 
+// Skills
 let skills = [
     {
         title:'Excel',
@@ -137,20 +122,11 @@ let skills = [
     }
 ]
 
+// Hobbies
 let hobbies = [
     {
         type:'indoor',
         title:'Watching Films',
-        imgUrl:'./img/readingBook.jfif'
-    },
-    {
-        type:'indoor',
-        title:'Play games with my family',
-        imgUrl:'./img/readingBook.jfif'
-    },
-    {
-        type:'indoor',
-        title:'Cooking',
         imgUrl:'./img/readingBook.jfif'
     },
     {
@@ -161,11 +137,6 @@ let hobbies = [
     {
         type:'outdoor',
         title:'Going to picnik',
-        imgUrl:'./img/readingBook.jfif'
-    },
-    {
-        type:'outdoor',
-        title:'Hiking',
         imgUrl:'./img/readingBook.jfif'
     },
     {
@@ -201,24 +172,7 @@ function loadHeader(){
 let elAboutMe = document.getElementById('aboutMe');
 elAboutMe.innerText = aboutMeText;
 
-let textsLarge = document.querySelectorAll('.textLarge');
-let textsMedium = document.querySelectorAll('.textMedium');
-let textsSmall = document.querySelectorAll('.textSmall');
-
-for(let i=0;i<textsLarge.length;i++){
-    textsLarge[i].innerHTML=testTextLarge
-}
-
-for(let i=0;i<textsMedium.length;i++){
-    textsMedium[i].innerHTML=testTextMedium
-}
-
-for(let i=0;i<textsSmall.length;i++){
-    textsSmall[i].innerHTML=testTextLarge
-}
-
-
-function addPart(nameOfOrganization,date,detail,imgSrc){
+function addPart(nameOfOrganization,date,detail,imgSrc,text){
 
     //add Bullet
     const part = document.createElement('div');
@@ -262,24 +216,27 @@ function addPart(nameOfOrganization,date,detail,imgSrc){
     const details = document.createElement('div');
     details.setAttribute('class','details');
 
-    const detailPar = document.createElement('p');
-    detailPar.innerText = detail;
+    const ul = document.createElement('ul');
+    for(let j=0;j<text.length;j++){
+        let li = document.createElement('li');
+        li.innerText = text[j]
+        ul.appendChild(li);
+    }
+    
 
-    details.appendChild(detailPar);
+    details.appendChild(ul);
     part.appendChild(details);
 
     return part;
 
 }
 
-
-
 // Load Experience 
 function loadExperiences(experiences,section){
     let part;
     for(let i=0;i<experiences.length;i++){
 
-        part = addPart(experiences[i].title,experiences[i].date,experiences[i].detail,experiences[i].imgSrc);
+        part = addPart(experiences[i].title,experiences[i].date,experiences[i].detail,experiences[i].imgSrc,experiences[i].text);
         section.appendChild(part);
     }
 
@@ -348,7 +305,7 @@ function loadHobbies(hobbies){
         imgOfActivity.setAttribute('src',hobbies[i].imgUrl);
 
         addActivity.appendChild(titleOfActivity);
-        addActivity.appendChild(imgOfActivity);
+        //addActivity.appendChild(imgOfActivity);
 
         switch (hobbies[i].type) {
             case 'indoor':
