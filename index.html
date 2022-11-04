@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/f0048163d2.js" crossorigin="anonymous"></script>
+</head>
+<body onload="loadHeader()">
+    <header id="start">
+        <i class="fa-solid fa-bars" id="menu" onclick="openNavMenu()"></i>
+        <div id="afterPressMenu">
+            <div id="contentsForPhone">
+                <ul class="listOfHeader">
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div id="socialMediaForPhone">
+                <ul class="listOfHeader">
+                    <li><a href="https://linkedin.com/in/fatih-yavuz-0a326b200"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/fthyavuz"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div> 
+
+        <nav id="navigation">
+            <ul id="home" class="listOfHeader">
+                <li><a href="#"><i class="fa-solid fa-house"></i></a></li>    
+            </ul>
+
+            <ul id="contents" class="listOfHeader">
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul id="socialMedia" class="listOfHeader">
+                <li><a href="https://linkedin.com/in/fatih-yavuz-0a326b200"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/fthyavuz"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="main-article-1">
+            <section class="container" id="intro">
+                <img id="imgProfile" src="./img/profile.jpeg" alt="Fatih's Profile Photo">
+                <p id="aboutMe"></p>
+                <ul class="summary">
+                    <li><a href="#intro">#Intro</a></li>
+                    <li><a href="#experience">#Experience</a></li>
+                    <li><a href="#education">#Edcucation</a></li>
+                    <li><a href="#skills">#Skills</a></li>
+                    <li><a href="#hobbies">#Hobbies</a></li>
+                </ul>
+            </section>
+            
+            <section class="container" id="experience"></section>
+
+            <section class="container" id="education"></section>
+
+            <section class="container" id="skills">
+                <div class="skillSet" id="advanced">
+                    <p class="titleOfLevel">Advanced</p>
+                </div>
+
+                <div class="skillSet" id="intermediate">
+                    <p class="titleOfLevel">Intermediate</p>
+                </div>
+                <div class="skillSet" id="begineer">
+                    <p class="titleOfLevel">Begineer</p>
+                </div>
+            </section>
+
+            <section class="container" id="hobbies">
+                <div id="indoor"></div>
+                <div id="outdoor"></div>
+            </section>
+        </article>
+    </main> 
+    <footer>
+        <a href="#start"><i id="clickUp" class="fa-solid fa-chevron-up"></i></a>
+        <nav>
+            <ul id="copyright" class="listOfFooter">
+                <li><i class="fa-regular fa-copyright"></i></li>
+                <li>Fatih Yavuz</li>
+            </ul>
+
+            <ul id="contents" class="listOfHeader">
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul id="socialMedia" class="listOfHeader">
+                <li><a href="https://linkedin.com/in/fatih-yavuz-0a326b200"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/fthyavuz"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

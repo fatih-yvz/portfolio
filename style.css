@@ -1,0 +1,344 @@
+
+/*reset some prop. for all elements*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+
+/* This part for header*/
+
+header{
+    background-color: rgb(51, 41, 41);
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+    transition: 0.50s all ease-in;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+#menu{
+    display: none;
+    font-size: 36px;
+}
+
+#afterPressMenu{
+    display: none;  
+    flex-direction: row;
+    justify-content: space-around;  
+}
+
+#afterPressMenu *{
+    padding: 5px;
+}
+
+#afterPressMenu ul{
+    list-style: none;
+}
+
+#socialMediaForPhone > ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#afterPressMenu a{
+    text-decoration: none;
+}
+
+
+
+header *{
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+}
+
+#welcome{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav li {
+    margin: 0.7em;
+}
+/*Select all listItem Tags that are children of the listOfHeader class*/
+nav  a {
+    text-decoration: none;
+}
+
+nav i {
+    font-size: 1.8em;
+}
+
+/*Header responsive*/
+
+@media screen and (max-width: 800px){
+
+    #menu{
+        display: block;
+        margin-left: 10px;
+    }
+
+    header > #navigation {
+        display: none;
+    }
+}
+
+/*This part is for main*/
+
+main{
+    color: black; /*debug*/
+}
+
+main > article {
+    border-bottom: 1px solid black;
+}
+
+/*General*/
+.container {
+    border-bottom: 2px solid green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container > *{
+    margin: 20px;
+}
+
+.container > p{
+    font-size: 18px;
+    /*width: 30vw;*/
+}
+
+/*Only Intro*/
+
+#intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#aboutMe{
+    font-size: 24px;
+    width: 30vw;
+}
+
+#imgProfile{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+#intro > .summary    {
+    list-style: none;
+    font-size: 20px;
+}
+
+.summary a {
+    text-decoration: none;
+    
+}
+
+.summary li {
+    margin-top: 10px;
+}
+
+/*Responsive for intro*/
+@media screen and (max-width: 800px){
+    #intro{
+        flex-direction: column;
+        justify-content: space-around;  
+        align-items: center;  
+    }
+    #intro > img {
+        width: 300px;
+        height: 300px;
+    }
+    #intro > p,ul {
+        width: 80%;
+        margin: 20px;
+    }
+
+    .summary{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .summary > li {
+        width: 30vw;
+    }
+}
+
+/*Experience and Education*/
+
+/*Bullet List Vertical Line*/
+.verticalBullet > .bullet {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.verticalBullet > .verticalLine {
+    width: 6px;
+    height: 30vh;
+    background-color: black;
+}
+
+.parts{
+    display: flex;
+    flex-direction: row;
+}
+
+.parts:nth-child(even){
+    justify-content: flex-end;
+}
+
+.parts > * {
+    margin: 20px;
+}
+
+.titles > p{
+    font-size: 36px;
+}
+
+.titles > img {
+    max-width: 20vw;
+    max-height: 25vw;
+}
+
+
+.details > p {
+    font-size: 24px;
+    width: 40vw;
+
+}
+/*Responsiye for Experience and Education*/
+@media screen and (max-width: 800px){
+    .parts{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+
+    .details > p {
+        width: 100%;
+    }
+
+    .verticalBullet{
+        display: none;
+    }
+}
+/* This part for Skills*/
+
+#skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.skillSet > * {
+    margin: 20px;
+}
+
+.skillSet > p {
+    font-size: 26px;
+}
+
+.addSkill{
+    display: flex;
+    flex-direction: row;
+}
+.addSkill > * {
+    margin: 5px;
+}
+
+.addSkill > p {
+    width: 100px;
+    background-color: antiquewhite;
+    font-size: 18px;
+}
+
+/*Responsive for skills*/
+@media screen and (max-width: 800px){
+    #skills{
+        flex-direction: column;
+    }
+} 
+
+/*Hobbies*/
+#hobbies{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#hobbies > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.addActivity{
+    width: 15vw;
+    margin: 10px;
+}
+
+.addActivity > img{
+    width: 10vw;
+    height: 8vw ;
+    border-radius: 25%;
+
+}
+/*This part is for footer*/
+
+footer{
+    background-color: rgb(222, 210, 210);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer  *{
+    color: black;
+}
+#clickUp{
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#clickUp:hover{
+    zoom: 120%; 
+}
+
+@media screen and (max-width: 800px){
+    
+    footer > nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
+

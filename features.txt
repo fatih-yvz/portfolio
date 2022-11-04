@@ -1,0 +1,6 @@
+1-) header transition 
+2-) Click Top button to scrool from botom to top 
+3-) slow scrool moving
+4-) to find icon, use fontwasome
+
+5-) responsive design check nav bar 
